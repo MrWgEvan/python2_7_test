@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/scrapySpace/mySpider" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scrapySpace/douyu" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scrapySpace/sun0769" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scrapySpace/zhihu" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scrapySpace/bookDown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../workSpace3.6" />
+    <orderEntry type="jdk" jdkName="Python 3.6.3 (D:\Python\python3.6.3\python.exe) (1)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

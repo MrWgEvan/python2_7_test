@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="做国内最权威,最活跃的Python社区.帮助Pythoner的技术快速提升,关心Pythoner的工作和生活,紧紧追随Python领域的前沿技术.">
+  <link rel="shortcut icon" href="https://ogmcsrgk5.qnssl.com/pythoncircle/img/favicon.ico" />
+  <meta name="keywords" content="Python,python,python学习,python教程,python题目,python培训,python精品文章,python论坛,程序员,部落">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="https://ogmcsrgk5.qnssl.com/pythoncircle/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/lib/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/lib/draggabilly.pkgd.min.js"></script>
+  <style type="text/css">
+  @media (min-width: 1200px) {width: 1170px;}
+  @media (min-width: 992px) {width: 970px;}
+  @media (min-width: 768px) {width: 750px;}
+  html, body {
+    background-image: url("https://ogmcsrgk5.qnssl.com/pythoncircle/img/background.png");
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+  }
+  div.navbar-header a.navbar-brand, ul.nav.navbar-nav a {
+    color: #61cdff;
+  }
+  div#footer {
+    background-color: #323633;
+    color: #888;
+    padding: 20px;
+    vertical-align: middle;
+  }
+  div.container {
+    min-height: 500px;
+  }
+  </style>
+</head>
+<body>
+<img src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/icon_121_75.png" style="display:none;" alt="" />
+<nav class="navbar navbar-default" style="background-image: url(https://ogmcsrgk5.qnssl.com/pythoncircle/img/bg-head.png); box-shadow: #aaa 3px 3px 5px; border: 0px; position: fixed; top: 0px; width: 100%; z-index: 999; border-radius: 0; text-align: center;">
+
+<div id="ieAlert" style="background-color: red; color: white; padding: 0.5em; font-size: 16px;display:none; overflow: hide;">
+  检测到您正在使用IE/360安全浏览器．建议使用非IE内核浏览器浏览，360安全浏览器建议使用＂极速模式＂
+  <div class="closeBtn" style="float: right; width: 32px; height: 32px; cursor: pointer;">X</div>
+</div>
+<script type="text/javascript">
+var useragent = window.userAgent || window.navigator.userAgent;
+window.is_ie = useragent.toLowerCase().indexOf("msie") >= 0;
+if (is_ie) {
+  $("div#ieAlert").css("display", "block");
+}
+$("div#ieAlert div.closeBtn").click(function () {
+  $("div#ieAlert").animate({"margin-top": "-32px"}, 500, function () {
+    $("div#ieAlert").css("display", "none");
+  });
+});
+</script>
+  <div id="navContainer" class="container-fluid" style="margin: 5px 0 5px 0; display: inline-block; width: 1170px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        Python部落
+      </a>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/qjiaosite/expert/list">付费答疑</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/doc/python_2_7_10/">Python2.7.10文档</a></li>
+            <li><a href="/doc/python_3_5_0/">Python3.5.0文档</a></li>
+            <li><a href="/doc/python2_stdlib_blog/">Python2标准库示例集合</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><a href="/fcode/downloadinstall">软件下载及安装</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">辅助工具<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/fcode/visualexe">可视化执行过程</a></li>
+            <li><a href="/fcode/game">有营养的游戏</a></li>
+            <li><a href="/fcode/jsonformat">JSON格式化工具</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search" action="/fcode/search">
+        <div class="form-group">
+          <input type="text" class="form-control" name="keyword" placeholder="关键词">
+        </div>
+        <button type="submit" class="btn btn-primary">搜</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="/accounts/login">登录</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" style="margin-top: 80px;">
+  
+<style type="text/css">
+div.topSpace {
+    height: 100px;
+}
+</style>
+<div class="container">
+  <div class="row">
+    
+  </div>
+  <div class="row">
+  	<div class="col-md-3">
+     &nbsp;
+    </div>
+  	<div class="col-md-6">
+      <div class="topSpace">
+        &nbsp;
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading" style="background-color: #085D9A; color: white;">
+          <b>登录</b>
+        </div>
+        <div class="panel-body">
+          <form method="post" action="/accounts/login">
+          <input type='hidden' name='csrfmiddlewaretoken' value='vOyOX4OZ79PmnF3ByuYUvCV5Oe6qBbqI' />
+          
+          <div class="input-group">
+              <span class="input-group-addon">用户名</span>
+              <input id="id_username" maxlength="254" name="username" placeholder="用户名或邮箱" type="text" class="form-control" value="" />
+          </div>
+          <br />
+          <div class="input-group">
+              <span class="input-group-addon">密码&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <input id="id_password" name="password" type="password" class="form-control" value="" />
+          </div>
+          <br />
+          <input type="submit" class="btn btn-primary" value="登录" />
+          <img src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/icon48_wx_login_btn.png" id="wxLoginBtn" height="34px" style="cursor: pointer;" />
+          <input type="hidden" name="next" value="/user/home/" />
+          </form>
+        </div>
+        <div class="panel-footer">
+          <a href="/user/register">还没有账户?去注册...</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/accounts/password_reset/">忘记密码!</a>
+        </div>
+      </div>
+      <div class="modal fade bs-example-modal-sm" id="wxLoginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content" id="wxQRCodeContainer" height="300px" style="background-color: #333;">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+  	<div class="col-md-3">
+     &nbsp;
+    </div>
+  </div>
+</div>
+<script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  $("#wxLoginBtn").click(function () {
+    if (navigator.userAgent.indexOf("MicroMessenger") >= 0) {
+      location.href = "/weixin/login/getcode/python?next=/user/home/";
+    } else {
+      $('#wxLoginModal').modal('show');
+      var obj = new WxLogin({id:"wxQRCodeContainer", 
+                             appid: "wxedfb864e7c5c6603", 
+                             scope: "snsapi_login", 
+                             redirect_uri: "https://python.freelycode.com/weixin/login/gettoken/python",
+                             state: "/user/home/",
+                             style: "white"});
+    }
+  });
+});
+</script>
+
+  <hr />
+</div>
+<div id="footer">
+  <center>
+      <a href="/fcode/about">关于我们</a>&nbsp;|&nbsp;
+      <a href="/fcode/contact">联系方式</a>&nbsp;|&nbsp;
+      <a href="/contribution/index">投稿及稿酬公示</a>&nbsp;|&nbsp;
+      <a href="/company/list">公司墙</a>&nbsp;|&nbsp;
+      <a href="/fcode/coinrank">琅琊榜</a>
+  </center>
+  <center>武汉沃依得科技有限公司@2015~2016 &nbsp;&nbsp; All Copy Right Reserved  </center>
+  	
+  <center><img src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/beianbgs.png" height="18px" width="18px"/><span style="vertical-align:middle">&nbsp;&nbsp;鄂ICP备13012010号-1</span></center>
+</div>
+<div id="warning">
+  <style type="text/css">
+  #warning {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    text-align: center;
+    font-size: 2em;
+    background-color: #ddd;
+    color: #aaa;
+    padding-top: 5px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: #aaa 3px -3px 3px;
+    display: none;  // switch on/off
+  }
+  </style>
+  2月15日11:00到13:00网站停机维护,13:00前恢复
+</div>
+<script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/js/bootstrap.min.js"></script>
+<div style="display:none;">
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+$(function(){
+  lrFixFooter("div#footer");  //调用方法：lrFixFooter("div.footerwarp"); 传入底部的类名或者ID名
+  function lrFixFooter(obj){
+    var footer = $(obj),doc = $(document);
+    function fixFooter(){
+      if(doc.height()-4 <= $(window).height()){
+        footer.css({
+          width:"100%",
+          position:"absolute",
+          left:0,
+          bottom:0  
+        });
+      }else{
+        footer.css({
+          position:"static"
+        });
+      }
+    }
+    fixFooter();
+    $(window).on('resize.footer', function(){
+      fixFooter();
+    });
+    $(window).on('scroll.footer',function(){
+      fixFooter();
+    }); 
+  }
+});
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255270602'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255270602' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>

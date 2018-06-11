@@ -1,0 +1,160 @@
+2018-03-24 20:58:22 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: zhihu)
+2018-03-24 20:58:22 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-7-6.1.7601-SP1
+2018-03-24 20:58:22 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'zhihu.spiders', 'SPIDER_MODULES': ['zhihu.spiders'], 'LOG_FILE': 'zhihu.log', 'DOWNLOAD_DELAY': 1, 'BOT_NAME': 'zhihu'}
+2018-03-24 20:58:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-03-24 20:58:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-24 20:58:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-24 20:58:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['zhihu.pipelines.ZhihuPipeline']
+2018-03-24 20:58:25 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
+2018-03-24 20:58:27 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:27 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/url {"url": "https://www.zhihu.com/signup", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/element {"using": "xpath", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "value": "//span[@data-reactid='94']"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/moveto {"sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "element": "0.36340776744818326-1"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/moveto {"sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "element": "0.36340776744818326-1"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/click {"button": 0, "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/element {"using": "xpath", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "value": "//input[@name=\"username\"]"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/element/0.36340776744818326-2/value {"text": "18665924017", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "id": "0.36340776744818326-2", "value": ["1", "8", "6", "6", "5", "9", "2", "4", "0", "1", "7"]}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/element {"using": "xpath", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "value": "//input[@name=\"password\"]"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/element/0.36340776744818326-3/value {"text": "2ghlmcL", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "id": "0.36340776744818326-3", "value": ["2", "g", "h", "l", "m", "c", "L"]}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/element {"using": "xpath", "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "value": "//button[@type='submit']"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/moveto {"sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "element": "0.36340776744818326-4"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/moveto {"sessionId": "13db9b1099792cb480d4c21bc8dbcc4c", "element": "0.36340776744818326-4"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/click {"button": 0, "sessionId": "13db9b1099792cb480d4c21bc8dbcc4c"}
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:29 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:6691/session/13db9b1099792cb480d4c21bc8dbcc4c/screenshot {"sessionId": "13db9b1099792cb480d4c21bc8dbcc4c"}
+2018-03-24 20:58:30 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-24 20:58:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-03-24 20:58:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\Python\python2.7\lib\site-packages\twisted\internet\defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "D:\Python\python2.7\lib\site-packages\scrapy\crawler.py", line 98, in crawl
+    six.reraise(*exc_info)
+  File "D:\Python\python2.7\lib\site-packages\scrapy\crawler.py", line 81, in crawl
+    start_requests = iter(self.spider.start_requests())
+TypeError: 'NoneType' object is not iterable
+2018-03-27 20:50:49 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: zhihu)
+2018-03-27 20:50:49 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-7-6.1.7601-SP1
+2018-03-27 20:50:49 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'zhihu.spiders', 'SPIDER_MODULES': ['zhihu.spiders'], 'LOG_FILE': 'zhihu.log', 'DOWNLOAD_DELAY': 1, 'BOT_NAME': 'zhihu'}
+2018-03-27 20:50:49 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-03-27 20:50:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-27 20:50:49 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-27 20:50:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['zhihu.pipelines.ZhihuPipeline']
+2018-03-27 20:50:52 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless", "window-size=1360x768"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless", "window-size=1360x768"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
+2018-03-27 20:50:53 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:50:53 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/url {"url": "https://www.zhihu.com/signup", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39"}
+2018-03-27 20:50:59 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:50:59 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/element {"using": "xpath", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "value": "//span[@data-reactid='94']"}
+2018-03-27 20:50:59 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:50:59 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/moveto {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "element": "0.18116345332580686-1"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/moveto {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "element": "0.18116345332580686-1"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/click {"button": 0, "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/element {"using": "xpath", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "value": "//input[@name=\"username\"]"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/element/0.18116345332580686-2/value {"text": "18665924017", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "id": "0.18116345332580686-2", "value": ["1", "8", "6", "6", "5", "9", "2", "4", "0", "1", "7"]}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/element {"using": "xpath", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "value": "//input[@name=\"password\"]"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/element/0.18116345332580686-3/value {"text": "2ghlmcL", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "id": "0.18116345332580686-3", "value": ["2", "g", "h", "l", "m", "c", "L"]}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/element {"using": "xpath", "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "value": "//button[@class=\"Button SignFlow-submitButton Button--primary Button--blue\"]"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/moveto {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "element": "0.18116345332580686-4"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/moveto {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39", "element": "0.18116345332580686-4"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/click {"button": 0, "sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39"}
+2018-03-27 20:51:00 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:03 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/screenshot {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39"}
+2018-03-27 20:51:03 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:03 [selenium.webdriver.remote.remote_connection] DEBUG: GET http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39/cookie {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39"}
+2018-03-27 20:51:04 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:04 [selenium.webdriver.remote.remote_connection] DEBUG: DELETE http://127.0.0.1:8461/session/a3cf55e3f7968c55fa1e28f63be4ae39 {"sessionId": "a3cf55e3f7968c55fa1e28f63be4ae39"}
+2018-03-27 20:51:04 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-03-27 20:51:07 [scrapy.core.engine] INFO: Spider opened
+2018-03-27 20:51:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-27 20:51:07 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-27 20:51:12 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.zhihu.com/> (failed 1 times): 500 Internal Server Error
+2018-03-27 20:51:17 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.zhihu.com/> (failed 2 times): 500 Internal Server Error
+2018-03-27 20:51:22 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET https://www.zhihu.com/> (failed 3 times): 500 Internal Server Error
+2018-03-27 20:51:22 [scrapy.core.engine] DEBUG: Crawled (500) <GET https://www.zhihu.com/> (referer: None)
+2018-03-27 20:51:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <500 https://www.zhihu.com/>: HTTP status code is not handled or not allowed
+2018-03-27 20:51:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-27 20:51:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 756,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 1185,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/500': 3,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 27, 12, 51, 22, 522000),
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/500': 1,
+ 'log_count/DEBUG': 39,
+ 'log_count/INFO': 8,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/500 Internal Server Error': 2,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2018, 3, 27, 12, 51, 7, 39000)}
+2018-03-27 20:51:22 [scrapy.core.engine] INFO: Spider closed (finished)

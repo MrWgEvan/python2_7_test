@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="做国内最权威,最活跃的Python社区.帮助Pythoner的技术快速提升,关心Pythoner的工作和生活,紧紧追随Python领域的前沿技术.">
+  <link rel="shortcut icon" href="https://ogmcsrgk5.qnssl.com/pythoncircle/img/favicon.ico" />
+  <meta name="keywords" content="Python,python,python学习,python教程,python题目,python培训,python精品文章,python论坛,程序员,部落">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title> 蛇穴 </title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="https://ogmcsrgk5.qnssl.com/pythoncircle/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/lib/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/lib/draggabilly.pkgd.min.js"></script>
+  <style type="text/css">
+  @media (min-width: 1200px) {width: 1170px;}
+  @media (min-width: 992px) {width: 970px;}
+  @media (min-width: 768px) {width: 750px;}
+  html, body {
+    background-image: url("https://ogmcsrgk5.qnssl.com/pythoncircle/img/background.png");
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+  }
+  div.navbar-header a.navbar-brand, ul.nav.navbar-nav a {
+    color: #61cdff;
+  }
+  div#footer {
+    background-color: #323633;
+    color: #888;
+    padding: 20px;
+    vertical-align: middle;
+  }
+  div.container {
+    min-height: 500px;
+  }
+  </style>
+</head>
+<body>
+<img src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/icon_121_75.png" style="display:none;" alt="" />
+<nav class="navbar navbar-default" style="background-image: url(https://ogmcsrgk5.qnssl.com/pythoncircle/img/bg-head.png); box-shadow: #aaa 3px 3px 5px; border: 0px; position: fixed; top: 0px; width: 100%; z-index: 999; border-radius: 0; text-align: center;">
+
+<div id="ieAlert" style="background-color: red; color: white; padding: 0.5em; font-size: 16px;display:none; overflow: hide;">
+  检测到您正在使用IE/360安全浏览器．建议使用非IE内核浏览器浏览，360安全浏览器建议使用＂极速模式＂
+  <div class="closeBtn" style="float: right; width: 32px; height: 32px; cursor: pointer;">X</div>
+</div>
+<script type="text/javascript">
+var useragent = window.userAgent || window.navigator.userAgent;
+window.is_ie = useragent.toLowerCase().indexOf("msie") >= 0;
+if (is_ie) {
+  $("div#ieAlert").css("display", "block");
+}
+$("div#ieAlert div.closeBtn").click(function () {
+  $("div#ieAlert").animate({"margin-top": "-32px"}, 500, function () {
+    $("div#ieAlert").css("display", "none");
+  });
+});
+</script>
+  <div id="navContainer" class="container-fluid" style="margin: 5px 0 5px 0; display: inline-block; width: 1170px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        Python部落
+      </a>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/qjiaosite/expert/list">付费答疑</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/doc/python_2_7_10/">Python2.7.10文档</a></li>
+            <li><a href="/doc/python_3_5_0/">Python3.5.0文档</a></li>
+            <li><a href="/doc/python2_stdlib_blog/">Python2标准库示例集合</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><a href="/fcode/downloadinstall">软件下载及安装</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">辅助工具<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/fcode/visualexe">可视化执行过程</a></li>
+            <li><a href="/fcode/game">有营养的游戏</a></li>
+            <li><a href="/fcode/jsonformat">JSON格式化工具</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search" action="/fcode/search">
+        <div class="form-group">
+          <input type="text" class="form-control" name="keyword" placeholder="关键词">
+        </div>
+        <button type="submit" class="btn btn-primary">搜</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li>
+          <a href="/user/home">
+            蛇穴
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li><a href="/user/logout">登出</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" style="margin-top: 80px;">
+  
+<style type="text/css">
+.mainNumber {
+  font-size: 50px;
+  color: green;
+}
+</style>
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="/">主页</a></li>
+      <li>一点寒光耀九州 的温馨蛇穴</li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    <ul class="nav nav-pills nav-stacked" role="tablist">
+      <li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab">概况</a></li>
+      <li role="presentation"><a href="#project" role="tab" data-toggle="tab">服务</a></li>
+      <li role="presentation"><a href="#cdn" role="tab" data-toggle="tab">CDN</a></li>
+      <li role="presentation"><a href="#email" role="tab" data-toggle="tab">邮件</a></li>
+      <li role="presentation"><a href="#sms" role="tab" data-toggle="tab">短信</a></li>
+      <li role="presentation"><a href="#finance" role="tab" data-toggle="tab">财务</a></li>
+      <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">设置</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-10">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="overview">
+        <style type="text/css">
+        #personAvatar {
+          float: left;        
+          width: 100px;
+          height: 100px;
+        }
+        #personDesc {
+          float: left;        
+          height: 100px;
+          margin-left: 15px;
+        }
+        .personalIcon {
+          width: 100%;
+          height: 100%;
+        }
+
+        .statsBoard {
+          height: 120px;
+        }
+        .statsItem {
+          float: left;
+          width: 18%;
+          height: 120px;
+          margin-left: 10px;
+          background-color: #f3f3f3;
+        }
+        .statsNum {
+          width: 100%;
+          height: 90px;
+          text-align: center;
+          line-height: 90px;
+          font-size: 26px;
+          font-weight: bold;
+          color: green;
+        }
+        .statsTitle {
+          width: 100%;
+          height: 30px;
+          text-align: center;
+          font-size: 16px;
+        }
+        </style>
+        <div class="well">
+          <div id="personIntro">
+            <div id="personAvatar">
+              
+                
+                  <img class="personalIcon" src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/no_avatar.jpg" alt="头像加载失败" onclick="window.location.href='/user/uploadavatar'">
+                
+              
+            </div>
+            <div id="personDesc">
+              蛇名: 一点寒光耀九州<br />
+              蛇邮: 1904484577@qq.com<br />
+              破壳日: 2017-10-21<br />
+              上次出穴日: 2017-12-12<br />
+	            蛇币<span class="number">0</span>两
+              (<a href="/user/coinhistory">账单</a>)
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="statsBoard">
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">在运行的服务(个)</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">提交微代码(个)</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">完成翻译稿(份)</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">刷题(道)</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">出题(道)</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        
+        
+      </div>
+      <div role="tabpanel" class="tab-pane" id="project">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="success">
+            	<th>服务名称</th>
+            	<th>付费模式</th>
+            	<th>单价（元/月）</th>
+            	<th>启动时间</th>
+				<th>到期时间</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td colspan="5" style="text-align: center; font-size: 26px; color: #666">您没有服务记录</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="cdn">
+        <div class="well">
+          <h3 style="margin-top: -2px">收费标准</h3>
+          <ul>
+          	<li>月末结算</li>
+          	<li>存储0.01元/G/日</li>
+            <li>流量0.5元/G/月</li>
+            <li>1G=1024M,1M=1024K,1K=1024B</li>
+            <li>流量统计数据截止到前天</li>
+          </ul>
+          <a href="/vcdn/mydisk" target="_blank" class="btn btn-warning">管理我的文件</a>
+          <a href="/vcdn/stats/page" class="btn btn-primary">查看每日使用量</a>
+        </div>
+        <div class="statsBoard">
+          <div class="statsItem">
+            <div class="statsNum">None B</div>
+            <div class="statsTitle">本月流量</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0 B</div>
+            <div class="statsTitle">存储量</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">文件数量</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="email">
+        <div class="well">
+          <h3 style="margin-top: -2px">收费标准</h3>
+          <ul>
+         	  <li>月末结算</li>
+          	<li>单价为 1 元 /  400 封，计费精确到分。</li>
+          </ul>
+          <a href="/vemail/console" target="_blank" class="btn btn-warning">设置及使用明细</a>
+        </div>
+        <div class="statsBoard">
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">本月发送量</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">今日发送量</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="sms">
+        <div class="well">
+          <h3 style="margin-top: -2px">收费标准</h3>
+          <ul>
+         	  <li>月末结算</li>
+          	<li>单价为 0.06元/封，计费精确到分。</li>
+          </ul>
+          <a href="/vsms/console" target="_blank" class="btn btn-warning">设置及使用明细</a>
+        </div>
+        <div class="statsBoard">
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">本月发送量</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">今日发送量</div>
+          </div>
+          <div class="statsItem">
+            <div class="statsNum">0</div>
+            <div class="statsTitle">剩余配额</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="finance">
+        <div class="well">
+          人民币余额:<br />
+          <span class="mainNumber">0.00</span>元
+          <br />
+          <a href="/payment/recharge" class="btn btn-warning">充值</a>
+          <a href="/user/rmbhistory" class="btn btn-primary">查看账单</a>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="settings">
+        <form class="form-inline">
+          <div class="input-group">
+            <span class="input-group-addon">支付宝账号</span>
+            <input id="alipayInput" maxlength="254" type="text" class="form-control" value="" />
+          </div>
+          <button type="button" class="btn btn-primary" id="setAlipayBtn">修改</button>
+        </form>
+        <br />
+        <form class="form-inline">
+          <div class="input-group">
+            <span class="input-group-addon">通知邮箱</span>
+            <input id="emailInput" maxlength="254" type="text" class="form-control" placeholder="输入你的邮箱" value="1904484577@qq.com" />
+          </div>
+          <button type="button" class="btn btn-primary" id="setEmailBtn">修改</button>
+        </form>
+        
+        <br />
+        <button class="btn btn-warning" id="wxLoginBtn">绑定微信</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <!--
+    <img src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/icon48_wx_login_btn.png" id="wxLoginBtn" height="34px" style="cursor: pointer;" />
+    -->
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="wxLoginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content" id="wxQRCodeContainer" height="300px" style="background-color: #333;">
+      &nbsp;
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/lib/jquery/jquery.csrf.js"></script>
+<script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  $("#setAlipayBtn").click(function (e) {
+    var param = {"alipay": $("#alipayInput").val()};
+    $.post("/user/setalipay", param, function (data) {
+      var res = JSON.parse(data);
+      if (res["status"] == "ok") {
+        alert("设置成功");
+      } else {
+        alert(res["msg"]);
+      }
+    });
+  });
+  $("#setEmailBtn").click(function (e) {
+    var param = {"email": $("#emailInput").val()};
+    $.post("/user/setemail", param, function (data) {
+      var res = JSON.parse(data);
+      if (res["status"] == "ok") {
+        alert("一封验证邮件已经发送到您的邮箱，请点击邮件中的链接验证您的邮箱．");
+      } else {
+        alert(res["msg"]);
+      }
+    });
+  });
+  $("#wxLoginBtn").click(function () {
+    if (navigator.userAgent.indexOf("MicroMessenger") >= 0) {
+      location.href = "/weixin/login/getcode/python?next=";
+    } else {
+      $('#wxLoginModal').modal('show');
+      var obj = new WxLogin({id:"wxQRCodeContainer", 
+                             appid: "wxedfb864e7c5c6603", 
+                             scope: "snsapi_login", 
+                             redirect_uri: "https://python.freelycode.com/weixin/login/gettoken/python",
+                             state: "",
+                             style: "white"});
+    }
+  });
+});
+</script>
+
+  <hr />
+</div>
+<div id="footer">
+  <center>
+      <a href="/fcode/about">关于我们</a>&nbsp;|&nbsp;
+      <a href="/fcode/contact">联系方式</a>&nbsp;|&nbsp;
+      <a href="/contribution/index">投稿及稿酬公示</a>&nbsp;|&nbsp;
+      <a href="/company/list">公司墙</a>&nbsp;|&nbsp;
+      <a href="/fcode/coinrank">琅琊榜</a>
+  </center>
+  <center>武汉沃依得科技有限公司@2015~2016 &nbsp;&nbsp; All Copy Right Reserved  </center>
+  	
+  <center><img src="https://ogmcsrgk5.qnssl.com/pythoncircle/img/beianbgs.png" height="18px" width="18px"/><span style="vertical-align:middle">&nbsp;&nbsp;鄂ICP备13012010号-1</span></center>
+</div>
+<div id="warning">
+  <style type="text/css">
+  #warning {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    text-align: center;
+    font-size: 2em;
+    background-color: #ddd;
+    color: #aaa;
+    padding-top: 5px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: #aaa 3px -3px 3px;
+    display: none;  // switch on/off
+  }
+  </style>
+  2月15日11:00到13:00网站停机维护,13:00前恢复
+</div>
+<script type="text/javascript" src="https://ogmcsrgk5.qnssl.com/pythoncircle/js/bootstrap.min.js"></script>
+<div style="display:none;">
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+$(function(){
+  lrFixFooter("div#footer");  //调用方法：lrFixFooter("div.footerwarp"); 传入底部的类名或者ID名
+  function lrFixFooter(obj){
+    var footer = $(obj),doc = $(document);
+    function fixFooter(){
+      if(doc.height()-4 <= $(window).height()){
+        footer.css({
+          width:"100%",
+          position:"absolute",
+          left:0,
+          bottom:0  
+        });
+      }else{
+        footer.css({
+          position:"static"
+        });
+      }
+    }
+    fixFooter();
+    $(window).on('resize.footer', function(){
+      fixFooter();
+    });
+    $(window).on('scroll.footer',function(){
+      fixFooter();
+    }); 
+  }
+});
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255270602'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255270602' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>
